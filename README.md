@@ -27,3 +27,9 @@ To train a MarblingNet model with pascal_voc format, simply run:
 ```shell script
 python train.py
 ```
+
+### MarblingNet_predict
+Use the trained model to make predictions, simply run:
+```shell script
+python predict.py
+```
