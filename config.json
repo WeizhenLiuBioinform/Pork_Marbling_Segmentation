@@ -1,0 +1,122 @@
+{
+    "name": "marblenet",
+    "device": "cuda:0",
+    "n_gpu": 1,
+    "prefetch": false,
+    "use_synch_bn": false,
+    "loggedir": "/home/zhangsf/code/saved",
+    
+    "arch": {
+        "type": "MarblingNet",
+        "args": {
+            "backbone": "vgg16",
+            "freeze_bn": false,
+            "freeze_backbone": false,
+            "use_aux": false,
+            "dilated": false,
+            "pretrained": false,
+            "use_attention": false
+        }
+    },
+    
+    "train_loader": {
+        "type": "VOC",
+        "args":{
+            "num_classes": 2,
+            "ignore_indexes": [],
+            "data_dir": "/home/zhangsf/code/PMD2023",
+            "batch_size": 8,
+            "base_size": [200,200],
+            "augment": true,
+            "shuffle": true,
+            "crop": false,
+            "rotate90": true,
+            "flip": true,
+            "shift_scale_rotate": true,
+            "contract":false,
+            "blur": false,
+            "enhancement":false,
+            "gamma":false,
+            "transpose":true,
+            "grid":false,
+            "Elastic":false,
+            "hue":false,
+            "clahe":false,
+            "split": "train",
+            "num_workers": 0,
+            "drop_last": true
+        }
+    },
+
+    "val_loader": {
+        "type": "VOC",
+        "args":{
+            "num_classes": 2,
+            "ignore_indexes": [],
+            "shuffle": true,
+            "data_dir": "/home/zhangsf/code/PMD2023",
+            "batch_size": 1,
+            "base_size": [400,800],
+            "val": true,
+            "split": "test",
+            "num_workers": 0,
+            "drop_last": false
+        }
+    },
+
+    "test_loader": {
+        "type": "VOC",
+        "args":{
+            "num_classes": 2,
+            "ignore_indexes": [],
+            "shuffle": true,
+            "data_dir": "/home/zhangsf/code/PMD2023",
+            "batch_size": 1,
+            "base_size": [400,800],
+            "val": true,
+            "split": "test",
+            "num_workers": 0,
+            "drop_last": false
+        }
+    },
+
+    "optimizer": {
+        "type": "Adam",
+        "differential_lr": false,
+        "args":{
+            "lr": 0.0001,
+            "weight_decay": 1e-4
+        }
+    },
+
+    "loss": "CE_LovaszSoftmaxLoss",
+    "ignore_index": 255,
+    "lr_scheduler": {
+        "type": "Poly",
+        "args": {
+        }
+    },
+
+    "trainer": {
+        "epochs": 400,
+        "save_dir": "saved/",
+        "save_period": 5,
+  
+        "monitor": "max Mean_IoU",
+        "early_stop": 200,
+        
+        "tensorboard": true,
+        "log_dir": "saved/runs",
+        "log_per_iter": 20,
+
+        "val": true,
+        "val_per_epochs": 1,
+
+        "test": true,
+        "test_per_epochs": 5
+    }
+}
+
+
+
+
