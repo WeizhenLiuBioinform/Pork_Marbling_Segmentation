@@ -1,3 +1,7 @@
+# Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from mobile devices
+
+Our paper is under review.
+
 # Deep learning pipeline for Pork Marbling segmentation
 
 ## Start
