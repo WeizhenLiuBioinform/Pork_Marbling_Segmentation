@@ -1,4 +1,4 @@
-# Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from mobile devices
+# Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from smartphones
 
 Our paper is under review.
 
