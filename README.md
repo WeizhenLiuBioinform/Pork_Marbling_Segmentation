@@ -1,3 +1,7 @@
+# Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from smartphones
+
+Our paper is under review.
+
 # Deep learning pipeline for Pork Marbling segmentation
 
 ## Start
@@ -26,4 +30,10 @@ Set the parameters required for training in config.json, especially the data set
 To train a MarblingNet model with pascal_voc format, simply run:
 ```shell script
 python train.py
+```
+
+### MarblingNet_predict
+Use the trained model to make predictions, simply run:
+```shell script
+python predict.py
 ```
