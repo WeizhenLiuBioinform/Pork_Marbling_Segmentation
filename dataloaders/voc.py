@@ -35,7 +35,7 @@ class VOCDataset(BaseDataSet):
     
     def _load_data(self, index):
         image_id = self.files[index]
-        image_path = os.path.join(self.image_dir, image_id + '.png')
+        image_path = os.path.join(self.image_dir, image_id + '.jpg')
         label_path = os.path.join(self.label_dir, image_id + '.png')
         image = np.asarray(Image.open(image_path).convert('RGB'), dtype=np.float32)
         # image = cv2.imread(image_path)
