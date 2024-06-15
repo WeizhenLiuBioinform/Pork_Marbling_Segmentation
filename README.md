@@ -1,13 +1,6 @@
 # Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from smartphones
 
-Our paper is under review.
-
-
-# The tips for using the Pork IMF App
-(1) Clean the subcutaneous and connective tissues in the slices of the LD muscle;
-(2) Take the image of pork LD muscle slices in a black background; 
-(3) Choose smartphones with high resolution camera; 
-（4）Minimize reflections as much as possible when capturing images of LD muscles in pork.
+This repository contains the code and dataset for the paper "Marbling-Net: a novel intelligent framework for pork marbling segmentation using images from smartphones," accepted at MDPI Sensors.
 
 # Deep learning pipeline for Pork Marbling segmentation
 
