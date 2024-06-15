@@ -37,3 +37,8 @@ Use the trained model to make predictions, simply run:
 ```shell script
 python predict.py
 ```
+# Citation
+If you use this code and data in a publication, please cite it as:
+
+* Zhang, S.; Chen, Y.; Liu, W.;Liu, B.; Zhou, X. Marbling-Net: A Novel Intelligent Framework for Pork Marbling
+  Segmentation Using Images from Smartphones. Sensors. 2023, 23, 5135. https://doi.org/10.3390/s23115135
